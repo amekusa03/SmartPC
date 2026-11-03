@@ -1,0 +1,22 @@
+# ESP-IDF
+build/
+sdkconfig
+sdkconfig.old
+dependencies.lock
+managed_components/
+
+# Editor & IDE
+.vscode/
+.idea/
+*.code-workspace
+*.suo
+*.user
+
+# Backup & Temporary files
+*.bak
+*~
+*.swp
+.DS_Store
+
+# Logs
+*.log
