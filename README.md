@@ -69,9 +69,14 @@ idf.py build
 idf.py -p /dev/ttyACM0 flash monitor
 ```
 
-### デバイスの初期化（再ペアリングしたい場合）
-NVS 領域（Wi-Fi 設定や Fabric 情報）を消去して出荷時状態に戻します。
+### デバイスの初期化（工場出荷状態リセット / 再ペアリング）
+Wi-Fi 設定や Matter Fabric 情報などの NVS 領域を消去して出荷時状態に戻す方法は 2 通りあります。
 
-```bash
-idf.py -p /dev/ttyACM0 erase-flash flash monitor
-```
+1. **本体の BOOT ボタン（物理リセット / 推奨）**:
+   - ESP32-S3 ボード上の **BOOT ボタン（GPIO 0）を 5 秒間長押し** します。
+   - シリアルログにカウントダウン（`1/5 sec...`）が表示され、5 秒経過後に自動で NVS 消去（`esp_matter::factory_reset` & `nvs_flash_erase`）が行われて再起動します。途中で離すとキャンセルされます。
+
+2. **PC から USB 経由で消去する場合**:
+   ```bash
+   idf.py -p /dev/ttyACM0 erase-flash flash monitor
+   ```

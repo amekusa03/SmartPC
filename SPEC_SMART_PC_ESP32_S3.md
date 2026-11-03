@@ -119,7 +119,7 @@ graph TD
 ### フェーズ 2: S3特有のUSB HID・ハードウェア検知
 - [x] Native USB HID ドライバ（TinyUSB / Keyboard / Consumer Control）
 - [x] USB 接続＆サスペンド検知による即時 PC 稼働判定
-- [ ] Ping (ICMP) 生死監視タスクの追加
+- [x] ハードウェア生死監視タスク（Native USB サスペンド検知 & Matter On/Off 自動双方向同期）
 
 ### フェーズ 3: Matter統合＆完成
 - [x] Matter On/Off プラグエンドポイントと WoL / HID / 状態検知の完全結合
