@@ -20,21 +20,13 @@ Google Home, Apple Home, Alexa 等の Matter エコシステムから直接シ�
 ### ペアリング方法（Google Home / Apple Home 等）
 
 1. 各スマートホームアプリ（Google Home など）を開き、**「デバイスの追加」→「Matter 対応デバイス」** を選択。
-2. 以下のいずれかの方法でデバイスを認識させます。
+2. カメラが起動したら、以下の **Matter QRコード** をスマホで読み取ります。
 
-#### 方法 A: QRコードをスキャンする
-以下のリンク先の QR コード画像をスマホカメラで読み取ります。
+![Matter QR Code](https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=MT%3AY.K9042C00KA0648G00)
 
-* **[テスト用 Matter QR コード画像を開く (外部QR生成リンク)](https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=MT%3AY.K9042C00KA0648G00)**
+* **[Matter QR コード画像を別タブで開く](https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=MT%3AY.K9042C00KA0648G00)**
 * Setup Payload: `MT:Y.K9042C00KA0648G00`
-
-#### 方法 B: 11桁のセットアップコードを手動入力する
-QRスキャン画面で「コードをお持ちでない場合」または「手動入力」を選択し、以下を入力します。
-
-```text
-34970112332
-```
-*(予備コード: `00440121110`)*
+* *(※Google Home アプリでは11桁のセットアップコード手動入力は選択できず、上記QRコードの読み取りが必須となります)*
 
 3. 画面の指示に従い、2.4GHz Wi-Fi のパスワードを転送すればペアリング完了です。
 

@@ -20,3 +20,7 @@ managed_components/
 
 # Logs
 *.log
+
+# other
+merukari.md
+USER_MANUAL.md
